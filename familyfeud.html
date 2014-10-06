@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html ng-app="familyFeudApp">
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="familyfeud-gameboard.js"></script>
+    </head>
+    
+    <body ng-controller="FamilyFeudGameboardController">
+        
+        <div id="gameboard">
+            <div ng-repeat="surveyAnswer in surveyAnswers">
+                <span>{{surveyAnswer.val}}</span>
+            </div>
+        </div>
+        
+        <form ng-submit="addSurveyAnswer()">
+            <input type="submit" value"Start Round"/>
+        </form>
+        
+    </body>
+
+</html>
