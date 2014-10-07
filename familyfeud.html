@@ -2,21 +2,31 @@
 <html ng-app="familyFeudApp">
 
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="familyfeud.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
         <script src="familyfeud-gameboard.js"></script>
     </head>
     
-    <body ng-controller="FamilyFeudGameboardController">
+    <body ng-controller="FamilyFeudGameboardController" ng-init="loadGames()">
         
-        <div id="gameboard">
-            <div ng-repeat="surveyAnswer in surveyAnswers">
-                <span>{{surveyAnswer.val}}</span>
+        <div class="question">{{surveyQuestion}}</div>
+        
+        <div class="gameboard">
+            <div class="survey-answer" ng-repeat="surveyAnswer in surveyAnswers">
+                <span>{{surveyAnswer.display()}}</span>
             </div>
         </div>
         
-        <form ng-submit="addSurveyAnswer()">
-            <input type="submit" value"Start Round"/>
-        </form>
+        <div class="answer-section">
+        <form ng-submit="checkAnswer()">
+            <input type="text" class="answer" ng-model="answerSubmitted"/>
+        </form>          
+        </div>
+        
+        <form ng-submit="loadNextRound()">
+            <input type="submit" value="Next Round"/>
+        </form>      
         
     </body>
 
