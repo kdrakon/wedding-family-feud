@@ -2,13 +2,16 @@
 body {
     background-color: #336699;
     font-family: 'Roboto', sans-serif;
+    background: url(familyfeud-set.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .question {
     font-size: 3em;
     text-align: center;
     color: #4FD5D6;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 5px 5px #000000;
     padding: 0.5em;
 }
 
@@ -28,14 +31,16 @@ body {
     font-size: 3em;
     margin: 0.1em;
     text-shadow: 2px 2px #ffffff;
+    -webkit-transition: -webkit-transform 700ms;
+    transition: transform 700ms;
 }
 
 .survey-answer-shown {
     background-color: #000000;
     color: #ffffff;
     text-shadow: 2px 2px #000000;
-    transform: rotateY(360deg);
-    transition: transform 2s;
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
 }
 
 .answer-section {

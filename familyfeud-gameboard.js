@@ -49,6 +49,11 @@ familyFeudApp.controller('FamilyFeudGameboardController', ['$scope', '$http', fu
         classes['survey-answer-shown'] = surveyAnswer.show;
         return classes;
     };
+    
+    $scope.reveal = function(surveyAnswer) {
+        surveyAnswer.show = true;
+        playAnswerSoundEffect(true);
+    };    
 
 }]);
 

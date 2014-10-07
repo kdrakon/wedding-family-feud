@@ -13,7 +13,8 @@
         <div class="question">{{surveyQuestion}}</div>
         
         <div class="gameboard">
-            <div ng-repeat="surveyAnswer in surveyAnswers" ng-class="getClass(surveyAnswer)">
+            <div ng-repeat="surveyAnswer in surveyAnswers"
+             id="survey-answer" ng-class="getClass(surveyAnswer)" ng-click="reveal(surveyAnswer)">
                 <span>{{surveyAnswer.display()}}</span>
             </div>
         </div>
