@@ -13,7 +13,7 @@
         <div class="question">{{surveyQuestion}}</div>
         
         <div class="gameboard">
-            <div class="survey-answer" ng-repeat="surveyAnswer in surveyAnswers">
+            <div ng-repeat="surveyAnswer in surveyAnswers" ng-class="getClass(surveyAnswer)">
                 <span>{{surveyAnswer.display()}}</span>
             </div>
         </div>

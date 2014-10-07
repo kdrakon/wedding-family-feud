@@ -34,6 +34,8 @@ body {
     background-color: #000000;
     color: #ffffff;
     text-shadow: 2px 2px #000000;
+    transform: rotateY(360deg);
+    transition: transform 2s;
 }
 
 .answer-section {
