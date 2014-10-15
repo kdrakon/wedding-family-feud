@@ -7,12 +7,18 @@ body {
     background-size: 100%;
 }
 
+#logo {
+    height: 20em;
+}
+
 .question {
     font-size: 3em;
     text-align: center;
     color: #ffffff;
     text-shadow: 5px 5px #000000;
-    padding: 0.5em;
+    width: 75%;
+    margin-top: 2em;
+    float: right;
 }
 
 .gameboard {

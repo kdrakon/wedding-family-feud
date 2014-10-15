@@ -10,7 +10,10 @@
     
     <body ng-controller="FamilyFeudGameboardController" ng-init="loadGames()">
         
-        <div class="question">{{surveyQuestion}}</div>
+        <div>
+            <image id="logo" src="logo.png"></image>
+            <div class="question">{{surveyQuestion}}</div>
+        </div>
         
         <div class="gameboard">
             <div ng-repeat="surveyAnswer in surveyAnswers"
