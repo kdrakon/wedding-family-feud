@@ -35,10 +35,13 @@ familyFeudApp.controller('FamilyFeudGameboardController', ['$scope', '$http', fu
     $scope.checkAnswer = function() {
         var found = false;
         angular.forEach($scope.surveyAnswers, function(surveyAnswer, index){
-           if (surveyAnswer.text.trim() === $scope.answerSubmitted.trim()){
-               found = true;
-               surveyAnswer.show = true;
-           }
+            var splitAnswers = surveyAnswer.text.split(",");
+            angular.forEach(splitAnswers, function(splitAnswer, index){
+                if (splitAnswer.trim().toLowerCase() === $scope.answerSubmitted.trim().toLowerCase()){
+                   found = true;
+                   surveyAnswer.show = true;
+                }
+            });
         });
         playAnswerSoundEffect(found);
     };

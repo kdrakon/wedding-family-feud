@@ -4,20 +4,44 @@
     "answers": [
       "honey",
       "sweetheart",
-      "sweetie",
+      "sugar",
       "love",
       "dear",
       "baby"
     ]
   },
   {
-    "question": "Name an animal that is easy to imitate in Charades...",
-    "answers": [
-      "monkey",
-      "dog",
-      "elephant",
-      "rabbit",
-      "bird"
-    ]
+  "question":"Name Something You Might Do On A First Date That Ruins It...",
+  "answers": [
+    "pass gas, fart",
+    "throw up, vomit",
+    "talk too much",
+    "go home together",
+    "drink too much, get drunk",
+    "talk about ex"
+  ]
+  },
+  {
+  "question":"Name something a woman looks forward to that a man dreads...",
+  "answers":[
+    "shopping",
+    "wedding, party",
+    "going out, dinner, dating",
+    "anniversary",
+    "in-laws",
+    "valentine's day"
+  ]
+  },
+  {
+  "question":"Name A Food That Would Be Disgusting To Be Fed 'Romantically'...",
+  "answers":[
+  "fish",
+  "soup",
+  "pizza",
+  "noodles",
+  "hot dog",
+  "ribs",
+  "chicken"
+  ]
   }
 ]
