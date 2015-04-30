@@ -10,27 +10,21 @@
     
     <body ng-controller="FamilyFeudGameboardController" ng-init="loadGames()">
         
-        <div>
-            <image id="logo" src="logo.png"></image>
-            <div class="question">{{surveyQuestion}}</div>
-        </div>
+        <image id="logo" src="logo.png"></image>
         
         <div class="gameboard">
+            <div class="question">{{surveyQuestion}}</div>
             <div ng-repeat="surveyAnswer in surveyAnswers"
              id="survey-answer" ng-class="getClass(surveyAnswer)" ng-click="reveal(surveyAnswer)">
                 <span>{{surveyAnswer.display()}}</span>
             </div>
+            
+            <form ng-submit="checkAnswer()">
+                <input type="text" class="answer" ng-model="answerSubmitted"/>
+            </form>
         </div>
         
-        <div class="answer-section">
-        <form ng-submit="checkAnswer()">
-            <input type="text" class="answer" ng-model="answerSubmitted"/>
-        </form>          
-        </div>
-        
-        <form ng-submit="loadNextRound()">
-            <input type="submit" value="Next Round"/>
-        </form>      
+        <span class="game-controls" ng-click="loadNextRound()">next round &#9654;</span>
         
     </body>
 
